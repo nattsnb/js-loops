@@ -1,5 +1,4 @@
 console.log('Script is working')
-
 const peopleArray = [
     {
         name: 'Adam',
@@ -19,20 +18,34 @@ const peopleArray = [
     }
 ]
 
-console.log(getAgeDifference(peopleArray)); // 70
 
-function getYoungestPerson(peopleArray) {
-    let youngestArray = peopleArray.sort((c1, c2) => (c1.age < c2.age) ? 1 : (c1.age > c2.age) ? -1 : 0);
-    return youngestArray[0].age
+getAgeDifference(peopleArray); // 70
+
+const people = [{name:"str", age:0}]
+
+function getYoungestPerson(people) {
+    let youngestPerson = people[0].age
+    for (let i=1; i < people.length; ++i){
+        const isYoungerPersonAge = people[i].age
+        if (isYoungerPersonAge < youngestPerson) {
+            youngestPerson = isYoungerPersonAge
+        }
+    }
+    return youngestPerson
+
 }
 
-
-
-function getOldestPerson(peopleArray) {
-    let oldestArray = peopleArray.sort((c1, c2) => (c1.age > c2.age) ? 1 : (c1.age < c2.age) ? -1 : 0);
-    return oldestArray[0].age;
+function getOldestPerson(people) {
+    let oldestPerson = people[0].age
+    for (let i=1; i < people.length; ++i){
+        const isOlderPersonAge = people[i].age
+        if (isOlderPersonAge > oldestPerson) {
+            oldestPerson = isOlderPersonAge
+        }
+    }
+    return oldestPerson
 }
 
-function getAgeDifference(peopleArray) {
-    console.log(getOldestPerson(peopleArray) - getYoungestPerson(peopleArray))
+function getAgeDifference(people) {
+    return getOldestPerson(people) - getYoungestPerson(people)
 }
