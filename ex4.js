@@ -5,34 +5,24 @@ const lettersObject = countLetters('The quick brown fox jumps over the lazy dog'
 console.log(lettersObject);
 
 
-// function countLetters(sentenceInput) {
-//     insensitiveInput = sentenceInput.replaceAll(' ', '').toLowerCase()
-//     stringToArry = insensitiveInput.split("")
-//     arrayLength = stringToArry.length
-//     alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-//     for (let i=0; i<=25; i++) {
-//         howMany = []
-//         for (let u=0; u<=(arrayLength-1); u++) {
-//             if (stringToArry[u] == alphabet[i]) {
-//                 howMany.push[1]
-//             }
-//         }
-//         console.log(alphabet[i] + ': ' + howMany.length)
-//         }
-// }
-
 function countLetters(sentenceInput) {
-    insensitiveInput = sentenceInput.replaceAll(' ', '').toLowerCase()
-    stringToArry = insensitiveInput.split("")
-    arrayLength = stringToArry.length
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    const result = {}
+    const insensitiveInput = sentenceInput.replaceAll(' ', '').toLowerCase()
+    const stringToArray = insensitiveInput.split('')
+    const arrayLength = stringToArray.length
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     for (let i=0; i<=25; i++) {
-        howMany = []
-        for (let u=0; u<=(arrayLength-1); u++) {
-            if (stringToArry[u] === alphabet[i]) {
-                howMany.push[1]
+        let letter = alphabet[i]
+        let howMany = 0
+        let index = arrayLength -1
+        while (index >= 0) {
+            const findLetter = stringToArray[index]
+            index = index-1
+            if (findLetter === letter) {
+                howMany = howMany + 1
             }
+            result[letter] = howMany
         }
-        console.log(alphabet[i] + ': ' + howMany.length)
-        }
+    }
+    return result
 }
