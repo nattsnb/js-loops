@@ -8,10 +8,10 @@ console.log(getSquaredNumbers(numbers)); // [1, 4, 9]
 console.log(numbers); // [1, 2, 3]
 
 function getSquaredNumbers(numbersInput) {
-    squeredArray = []
-    arrayLength = numbersInput.length
+    let squaredArray = []
+    const arrayLength = numbersInput.length
     for (let i=0; i<=arrayLength; ++i) {
-        squeredArray.push(numbersInput[i]*numbersInput[i])
+        squaredArray.push(numbersInput[i]*numbersInput[i])
     }
-    return squeredArray
+    return squaredArray
 }
