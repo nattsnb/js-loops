@@ -4,8 +4,8 @@ getReversedString('Hello!'); // '!olleH'
 getReversedString('Arrays'); // 'syarrA'
 
 function getReversedString(stringInput) {
-    stringToArray = stringInput.split("")
-    reversedArray = stringToArray.reverse()
+    const stringToArray = stringInput.split("")
+    const reversedArray = stringToArray.reverse()
     return reversedArray.join("")
 }
 
@@ -15,7 +15,7 @@ isPalindrome('Was it a cat I saw') // true
 isPalindrome('Hello!'); // false
 
 function isPalindrome(isPallindromeInput) {
-    insensitiveInput = isPallindromeInput.replaceAll(' ', '').toLowerCase()
-    pallindromeOutcome = getReversedString(insensitiveInput)
+    const insensitiveInput = isPallindromeInput.replaceAll(' ', '').toLowerCase()
+    const pallindromeOutcome = getReversedString(insensitiveInput)
     return pallindromeOutcome == insensitiveInput
 }
