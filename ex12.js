@@ -1,8 +1,8 @@
-function maps(x){
-    let newX = []
-    for (let i=0; i<x.length; i++){
-        const newNumber = x[i] * 2
-        newX.push(newNumber)
+function maps(inputArray){
+    let doubledArray = []
+    for (let i=0; i<inputArray.length; i++){
+        const newNumber = inputArray[i] * 2
+        doubledArray.push(newNumber)
     }
-    return newX
+    return doubledArray
 }
