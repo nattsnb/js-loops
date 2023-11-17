@@ -24,26 +24,26 @@ getAgeDifference(peopleArray); // 70
 const people = [{name:"str", age:0}]
 
 function getYoungestPerson(people) {
-    let youngestPerson = people[0].age
+    let youngestPersonAge = people[0].age
     for (let i=1; i < people.length; ++i){
-        const isYoungerPersonAge = people[i].age
-        if (isYoungerPersonAge < youngestPerson) {
-            youngestPerson = isYoungerPersonAge
+        const nextYoungerPersonAge = people[i].age
+        if (nextYoungerPersonAge < youngestPersonAge) {
+            youngestPersonAge = nextYoungerPersonAge
         }
     }
-    return youngestPerson
+    return youngestPersonAge
 
 }
 
 function getOldestPerson(people) {
-    let oldestPerson = people[0].age
+    let oldestPersonAge = people[0].age
     for (let i=1; i < people.length; ++i){
-        const isOlderPersonAge = people[i].age
-        if (isOlderPersonAge > oldestPerson) {
-            oldestPerson = isOlderPersonAge
+        const nextOlderPersonAge = people[i].age
+        if (nextOlderPersonAge > oldestPersonAge) {
+            oldestPersonAge = nextOlderPersonAge
         }
     }
-    return oldestPerson
+    return oldestPersonAge
 }
 
 function getAgeDifference(people) {
