@@ -4,7 +4,7 @@ getReversedString('Hello!'); // '!olleH'
 getReversedString('Arrays'); // 'syarrA'
 
 function getReversedString(stringInput) {
-    stringToArray = stringInput.split("")
-    reversedArray = stringToArray.reverse()
+    const stringToArray = stringInput.split("")
+    const reversedArray = stringToArray.reverse()
     return reversedArray.join("")
 }
